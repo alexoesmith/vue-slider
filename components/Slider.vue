@@ -1,8 +1,7 @@
 <script setup>
 const config = useRuntimeConfig();
 
-// API
-const { data: images } = await useLazyFetch(config.apiUrl + "/api/slides?populate=*");
+const { data: images, pending } = await useFetch(config.apiUrl + "/api/slides?populate=*");
 
 const timer = ref(0);
 const progress = ref(0);
@@ -66,7 +65,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <Loading v-if="loading" />
+  <Loading v-if="loading || pending" />
 
   <section class="relative w-full h-screen overflow-hidden bg-black">
     <TransitionGroup name="fade" tag="ul" class="absolute w-full h-full overflow-hidden">
