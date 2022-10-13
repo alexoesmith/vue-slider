@@ -1,8 +1,8 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  css: ["~/assets/css/custom.css","@fortawesome/fontawesome-svg-core/styles.css"],
+  css: ["~/assets/css/custom.css", "@fortawesome/fontawesome-svg-core/styles.css"],
 
-  modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt", "@nuxtjs/google-fonts"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/google-fonts"],
 
   runtimeConfig: {
     public: {
